@@ -1,6 +1,6 @@
 import Products from '@/components/Products';
 import Title from '@/components/Title';
-import Image from 'next/image'
+
 
 const getData = async()=>{
   const res = await fetch("https://hippo-api.vercel.app/burners")
@@ -11,7 +11,7 @@ return res.json();
 };  
 export default async function Home() {
   const products = await getData();
-  
+  console.log(products)
   return (
    <main>
     <div>

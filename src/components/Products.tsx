@@ -4,7 +4,7 @@
 import { usePathname} from 'next/navigation'
 import Link from "next/link";
 import Image from "next/image";
-import { type } from "os";
+
 interface ProductProps{
     _id: number;
     title: string;
@@ -12,14 +12,13 @@ interface ProductProps{
     image: string;
     price:number;
     previousPrice:number;
+    url:string;
     isNew:boolean;
     category: string;
     brand: string;
   
 }
-type intProps = {
-    ama:string;
-};
+
 interface Props {
     products: ProductProps[];
      

@@ -48,7 +48,7 @@ const SingleProduct = async ({searchParams }:Props) => {
             <p className="font-sans"><span className="font-bold ">Set Price:</span>${product?.setPrice}</p>
             <p className="font-sans" ><span className="font-bold ">Category:</span>{product?.category}</p>
             <p className="font-sans" ><span className="font-bold ">Materials:</span>{product?.Materials}</p>
-            <button className=" h-10 w-40 mt-1 rounded-3xl font-semibold bg-red-300 justify-end hover:bg-gray-300 hover:text-xl duration-300" ><Link href='https://ghosthippo.etsy.com' >Visit On Etsy</Link> </button> 
+            <button className=" h-10 w-40 mt-1 rounded-3xl font-semibold bg-red-300 justify-end hover:bg-gray-300 hover:text-xl duration-300" ><Link href={product?.url} >Visit On Etsy</Link> </button> 
             
            </div>
            

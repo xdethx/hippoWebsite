@@ -36,17 +36,17 @@ const Products = ({products}:Props ) => {
         
      
         {
-            products.map((item)=>(
-                <Link href={{pathname:"/singleproduct", query:{_id:item?._id}}} key={item._id}>
+            products.map((products)=>(
+                <Link href={{pathname:"/singleproduct", query:{_id:products?._id}}} key={products._id}>
                     <div className="border-[3px] border-gray-300 bg-gray-200 rounded-3xl  overflow-hidden hover:border-gray-950 duration-300 ">
-                        <Image src={item?.image}
+                        <Image src={`${products?.image}`} 
                          width={500}
                           height={500}
                            alt="product image"
                            className="w-full h-full object-contain "/>
                            <div className="px-4 pd-2 text-sm flex flex-col gap-1 ">
-                            <p className="text-gray-600 font-mono truncate" >{item?.title}</p>
-                            <p className="font-semibold">${item?.price}</p>
+                            <p className="text-gray-600 font-mono truncate" >{products?.title}</p>
+                            <p className="font-semibold">${products?.price}</p>
                             <div className="flex items-center  justify-end border-t-[1px] -mt-1 border-zinc-600 ">
                                 
                                 <button className="uppercase  text-xs font-semibold p-1 m-1  hover:text-blue-700 duration-200 ">more info</button>

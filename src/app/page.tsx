@@ -11,7 +11,7 @@ return res.json();
 };  
 export default async function Home() {
   const products = await getData();
-  console.log(products)
+ 
   return (
    <main>
     <div>

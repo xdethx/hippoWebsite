@@ -1,9 +1,9 @@
-'use client'
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+
 
 import { getSingleProduct } from '@/helpers'
 import Link from "next/link";
+
 
 
 
@@ -15,10 +15,14 @@ import Link from "next/link";
     searchParams:{[key:string]:string|string[] | undefined }
  }
 const SingleProduct = async ({searchParams }:Props) => {
+
+  
+
     const _idString = searchParams?._id
     const _id = Number(_idString);
     const product = await getSingleProduct(_id)
   
+
   return (
    
 
@@ -26,16 +30,7 @@ const SingleProduct = async ({searchParams }:Props) => {
       
    
       
-     
-      <Carousel  showArrows={true}  showThumbs={false} showStatus={false}>
-           
-           {product.image.map((item:any) => (
-           
-            <img  className="object-contain  w-100% h-[600px] min-h-[400px] "  key={item} src={item}  alt="slides" />
-           
-           ))} 
-     </Carousel>
-    
+      <img  className="object-contain  w-100% h-[600px] min-h-[400px] "   src={product?.image[0]}  alt="slides" />
       
     
         
@@ -48,7 +43,7 @@ const SingleProduct = async ({searchParams }:Props) => {
             <p className="font-sans"><span className="font-bold ">Set Price:</span>${product?.setPrice}</p>
             <p className="font-sans" ><span className="font-bold ">Category:</span>{product?.category}</p>
             <p className="font-sans" ><span className="font-bold ">Materials:</span>{product?.Materials}</p>
-            <button className=" h-10 w-40 mt-1 rounded-3xl font-semibold bg-red-300 justify-end hover:bg-gray-300 hover:text-xl duration-300" ><Link href={product?.url} >Visit On Etsy</Link> </button> 
+            <button className=" h-10 w-40 mt-1 rounded-3xl font-semibold bg-red-300 justify-end hover:bg-gray-300 hover:text-xl duration-300" ><Link href={`${product?.url}`} >Visit On Etsy</Link> </button> 
             
            </div>
            

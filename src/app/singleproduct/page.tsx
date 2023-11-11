@@ -30,7 +30,7 @@ const SingleProduct = async ({searchParams }:Props) => {
       
    
       
-      <img  className="object-contain  w-100% h-[600px] min-h-[400px] "   src={product?.image[0]}  alt="slides" />
+      <img  className="object-contain  w-100% h-[600px] min-h-[400px] "   src={product?.image}  alt="slides" />
       
     
         

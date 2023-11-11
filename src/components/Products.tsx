@@ -39,7 +39,7 @@ const Products = ({products}:Props ) => {
             products.map((item)=>(
                 <Link href={{pathname:"/singleproduct", query:{_id:item?._id}}} key={item._id}>
                     <div className="border-[3px] border-gray-300 bg-gray-200 rounded-3xl  overflow-hidden hover:border-gray-950 duration-300 ">
-                        <Image src={item?.image[0]}
+                        <Image src={item?.image}
                          width={500}
                           height={500}
                            alt="product image"

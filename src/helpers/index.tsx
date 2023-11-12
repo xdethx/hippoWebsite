@@ -1,8 +1,9 @@
 const getData = async()=>{
-    const res = await fetch("https://hippo-api.vercel.app/burners")
+    const res = await fetch("https://hippo-api-deths-projects.vercel.app/burners")
   if(!res.ok){
     throw new Error("failed to fetch data");
   }
+  
   return res.json();
   }; 
 
@@ -11,3 +12,4 @@ const getData = async()=>{
     const singleItem = await item.find((product:any)=> product._id === _id)
     return singleItem;
   }
+

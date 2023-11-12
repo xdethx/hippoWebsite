@@ -2,13 +2,13 @@ import Products from "@/components/Products";
 import Title from "@/components/Title";
 
 const getData = async()=>{
-    const res = await fetch("https://hippo-api.vercel.app/burners")
+    const res = await fetch("https://hippo-api-deths-projects.vercel.app/burners")
   if(!res.ok){
     throw new Error("failed to fetch data");
   }
   return res.json();
   }; 
-const PhoneCase = async () => {
+const Christmas = async () => {
     const products = await getData();
    
   return (
@@ -19,7 +19,7 @@ const PhoneCase = async () => {
   )
 }
 
-export default PhoneCase
+export default Christmas
 
 
 export async function generateMetadata() {
